@@ -1,0 +1,21 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <f:entry title="Search Path" field="searchPath">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="File Extension" field="fileExtension">
+    <select name="fileExtension">
+      <f:option value="(.*.rc)" selected="${instance == null || instance.fileExtension=='(.*.rc)'}">Resource Files</f:option>
+      <f:option value="AssemblyInfo.cs" selected="${instance.fileExtension =='AssemblyInfo.cs'}">C# AssemblyInfo</f:option>
+      <f:option value="AssemblyInfo.cpp" selected="${instance.fileExtension =='AssemblyInfo.cpp'}">C++ AssemblyInfo</f:option>
+    </select>
+  </f:entry>
+  <f:entry title="File Version" field="fileVersion">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Product Version" field="productVersion">
+    <f:textbox />
+  </f:entry>
+   <f:entry title="Copyright String" field="copyrightString">
+    <f:textbox default="ES_CURRENT_YEAR. All Rights Reserved."/>
+  </f:entry>
+</j:jelly>
