@@ -1,0 +1,1 @@
+# assemblyInfo-updater
